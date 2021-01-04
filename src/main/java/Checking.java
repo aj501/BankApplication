@@ -27,6 +27,7 @@ public Checking(String name, String sSN, double initialDeposit){
 public void showInfo() {
     super.showInfo();
   System.out.println("ACCOUNT TYPE: Checking ");
+
 }
 
   //List methods specific to checking account

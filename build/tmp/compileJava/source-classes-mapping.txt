@@ -2,9 +2,9 @@ IRate.java
  IRate
 Account.java
  Account
-Checking.java
- Checking
 Savings.java
  Savings
+Checking.java
+ Checking
 BankAccountApp.java
  BankAccountApp
