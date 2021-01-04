@@ -15,7 +15,7 @@ public abstract class Account implements IRate {
   abstract void deposit();
   abstract void withdraw();
   abstract void transfer();
-  abstract String showInfo();
+
 
 
   //Constructor to set base properties and initialize account
@@ -23,10 +23,6 @@ public abstract class Account implements IRate {
     this.name = name;
     this.sSN = sSN;
     balance = initialDeposit;
-
-    System.out.println("Name: " + name + " SSN: " + sSN + " Initial Deposit: " + initialDeposit);
-    System.out.print("New account: ");
-
 
     //set account number
     index++;
@@ -39,6 +35,12 @@ public abstract class Account implements IRate {
     int randomNumber = (int) (Math.random() * Math.pow(10,3));
     return lastTwoOfSSN + uniqueID + randomNumber;
 
+  }
+  public void showInfo() {
+    System.out.println(
+        "NAME: " + name +
+        "\nACCOUNT NUMBER: " + accountNumber +
+        "\nBALANCE: " + balance);
   }
 
 
