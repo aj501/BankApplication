@@ -49,7 +49,12 @@ public abstract class Account implements IBaseRate {
     int uniqueID = index;
     int randomNumber = (int) (Math.random() * Math.pow(10, 3));
     return lastTwoOfSSN + uniqueID + randomNumber;
-
+  }
+  public void compound() {
+    double accruedInterest = balance * (rate/100);
+    System.out.println("Accrued Interest: " + accruedInterest);
+    balance = balance + accruedInterest;
+    printBalance();
   }
 
   public void showInfo() {
