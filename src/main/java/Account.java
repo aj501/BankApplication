@@ -1,4 +1,4 @@
-public abstract class Account implements IRate {
+public abstract class Account implements IBaseRate {
   //Parent class of Checking and Savings
   ///Use abstract as we don't want to create object from the account
   // List of common properties for checking and savings accounts
@@ -13,9 +13,10 @@ public abstract class Account implements IRate {
 
   //List of common methods
   abstract void deposit();
-  abstract void withdraw();
-  abstract void transfer();
 
+  abstract void withdraw();
+
+  abstract void transfer();
 
 
   //Constructor to set base properties and initialize account
@@ -27,20 +28,25 @@ public abstract class Account implements IRate {
     //set account number
     index++;
     this.accountNumber = setAccountNumber();
+    setRate();
   }
+
+  public abstract void setRate();
 
   private String setAccountNumber() {
     String lastTwoOfSSN = sSN.substring(sSN.length() - 2, sSN.length());
     int uniqueID = index;
-    int randomNumber = (int) (Math.random() * Math.pow(10,3));
+    int randomNumber = (int) (Math.random() * Math.pow(10, 3));
     return lastTwoOfSSN + uniqueID + randomNumber;
 
   }
+
   public void showInfo() {
     System.out.println(
-        "NAME: " + name +
-        "\nACCOUNT NUMBER: " + accountNumber +
-        "\nBALANCE: " + balance);
+        "NAME: " + name
+            + "\nACCOUNT NUMBER: " + accountNumber
+            + "\nBALANCE: " + balance
+            + "\nRATE: " + rate + "%");
   }
 
 
