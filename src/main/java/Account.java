@@ -1,12 +1,12 @@
 public abstract class Account implements IBaseRate {
 
-  String name;
-  String sSN;
+  private String name;
+  private String sSN;
 
-  double balance;
+  private double balance;
 
-  String accountNumber;
-  double rate;
+  protected String accountNumber;
+  protected double rate;
   static int index = 10000;
 
   //List of common methods

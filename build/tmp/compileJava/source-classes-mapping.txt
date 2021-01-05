@@ -1,10 +1,10 @@
-IBaseRate.java
- IBaseRate
-Checking.java
- Checking
 Account.java
  Account
 Savings.java
  Savings
+Checking.java
+ Checking
+IBaseRate.java
+ IBaseRate
 BankAccountApp.java
  BankAccountApp

@@ -10,6 +10,5 @@ public class BankAccountApp {
     sv1.showInfo();
     sv1.compound();
     System.out.println("**********************");
-
   }
 }

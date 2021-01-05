@@ -1,15 +1,17 @@
-import javax.management.remote.JMXAddressable;
 
 public class Savings extends Account {
-  int safetyDepositID;
-  int safetyDepositBoxKey;
+
+  //We want safety deposit ID and key available only in this class
+
+  private int safetyDepositID;
+  private int safetyDepositBoxKey;
 
   //Call constructor to initialize checking account properties
+
   public Savings(String name, String sSN, double initialDeposit) {
     super(name, sSN, initialDeposit);
     accountNumber = "1" + accountNumber;
     setSafetyDepositBox();
-
   }
 
   @Override
