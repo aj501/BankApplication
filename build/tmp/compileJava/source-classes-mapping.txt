@@ -1,12 +1,12 @@
+IBaseRate.java
+ IBaseRate
+utilities/CSV.java
+ utilities.CSV
 Account.java
  Account
 Savings.java
  Savings
 Checking.java
  Checking
-IBaseRate.java
- IBaseRate
-utilities/CSV.java
- utilities.CSV
 BankAccountApp.java
  BankAccountApp

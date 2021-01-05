@@ -12,10 +12,12 @@ public abstract class Account implements IBaseRate {
   //List of common methods
   public void deposit(double amount) {
     balance = balance + amount;
+    printBalance();
   }
 
   public void withdraw(double amount) {
     balance = balance - amount;
+    printBalance();
   }
 
   public void transfer(String destinationAccount, double amount) {
