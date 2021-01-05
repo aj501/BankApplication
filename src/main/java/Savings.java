@@ -4,24 +4,6 @@ public class Savings extends Account {
   int safetyDepositID;
   int safetyDepositBoxKey;
 
-
-  @Override
-  void deposit() {
-
-  }
-
-  @Override
-  void withdraw() {
-
-  }
-
-  @Override
-  void transfer() {
-
-  }
-
-  //Properties specific to Savings account:
-
   //Call constructor to initialize checking account properties
   public Savings(String name, String sSN, double initialDeposit) {
     super(name, sSN, initialDeposit);

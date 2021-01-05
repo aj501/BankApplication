@@ -1,7 +1,5 @@
 public abstract class Account implements IBaseRate {
-  //Parent class of Checking and Savings
-  ///Use abstract as we don't want to create object from the account
-  // List of common properties for checking and savings accounts
+
   String name;
   String sSN;
 
@@ -12,13 +10,23 @@ public abstract class Account implements IBaseRate {
   static int index = 10000;
 
   //List of common methods
-  abstract void deposit();
+  public void deposit(double amount) {
+    balance = balance + amount;
+  }
 
-  abstract void withdraw();
+  public void withdraw(double amount) {
+    balance = balance - amount;
+  }
 
-  abstract void transfer();
+  public void transfer(String destinationAccount, double amount) {
+    balance = balance - amount;
+    System.out.println("Transferring to " + destinationAccount + " an amount of: $" + amount);
+    printBalance();
+  }
 
-
+  public void printBalance() {
+    System.out.println("Your current balance is: $" + balance);
+  }
   //Constructor to set base properties and initialize account
   public Account(String name, String sSN, double initialDeposit) {
     this.name = name;
@@ -26,8 +34,11 @@ public abstract class Account implements IBaseRate {
     balance = initialDeposit;
 
     //set account number
+
     index++;
     this.accountNumber = setAccountNumber();
+    //set rate
+
     setRate();
   }
 
@@ -48,10 +59,4 @@ public abstract class Account implements IBaseRate {
             + "\nBALANCE: " + balance
             + "\nRATE: " + rate + "%");
   }
-
-
-//  ## Application Requirements:
-//      - Read a .csv file of names, social security numbers, account type, and initial deposit
-//- Use proper data structure to hold all these accounts
-//
 }

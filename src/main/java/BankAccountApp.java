@@ -6,10 +6,8 @@ public class BankAccountApp {
     ck1.showInfo();
     System.out.println("***********");
     sv1.showInfo();
-
-
-
-
-  //Read csv file and create accounts based on that data
+    sv1.deposit(5000);
+    sv1.withdraw(200);
+    sv1.transfer("Checking", 1000);
   }
 }
