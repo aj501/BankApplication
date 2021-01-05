@@ -4,7 +4,6 @@ import java.util.List;
 
 public class BankAccountApp {
   public static void main(String[] args) {
-
     List<Account> account = new LinkedList<>();
 
     String file = "NewBankAccounts.csv";

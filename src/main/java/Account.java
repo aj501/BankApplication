@@ -7,7 +7,7 @@ public abstract class Account implements IBaseRate {
 
   protected String accountNumber;
   protected double rate;
-  static int index = 10000;
+  static int index = 1000;
 
   //List of common methods
   public void deposit(double amount) {

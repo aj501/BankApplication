@@ -1,7 +1,9 @@
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Checking extends Account {
 
   //We want debit card number and pin only available inside this this class
-  private int debitCardNumber;
+  private long debitCardNumber;
   private int debitCardPin;
 
   //Call constructor to initialize checking account properties
@@ -17,7 +19,10 @@ public class Checking extends Account {
   }
 
   private void setDebitCard() {
-    debitCardNumber = (int) (Math.random() * Math.pow(10, 12));
+    //debitCardNumber = (int) (Math.random() * Math.pow(10, 12));
+    long min = (long)Math.pow(10, 11);
+    long max = (long)Math.pow(10, 12);
+    debitCardNumber = ThreadLocalRandom.current().nextLong(min,  max);
     debitCardPin = (int) (Math.random() * Math.pow(10, 4));
   }
 
